@@ -11,7 +11,6 @@ function Home() {
         </div>
         <div className="home-header-content-child">
           <h1 className="project-title">100 Days of Code</h1>
-          <p>Dashboard to track the progress of 100daysofcode challenge.</p>
         </div>
       </div>
       <div class="container">
