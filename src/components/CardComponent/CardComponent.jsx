@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Badge, Button } from 'antd';
+import { Card, Badge, Button, Rate } from 'antd';
 
 export default function CardComponent(props) {
   return (
@@ -18,9 +18,12 @@ export default function CardComponent(props) {
               }}
             />
           ))}
-        <Button type="primary" size="large" disabled>
-          View
-        </Button>
+        <div className="card-footer">
+          <Rate allowClear={false} defaultValue={3} />
+          <Button type="primary" size="large" disabled>
+            View
+          </Button>
+        </div>
       </Card>
     </div>
   );
