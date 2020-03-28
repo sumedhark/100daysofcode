@@ -19,7 +19,7 @@ function Home() {
           <img className="proud-coder-image" src={coderBg} alt="proud coder" />
         </div>
         <div className="home-header-content-child">
-          <h1 className="project-title">100 Days of Code</h1>
+          <h1 className="project-title">{`100 Days of <CODE />`}</h1>
         </div>
       </div>
       <div class="container">
