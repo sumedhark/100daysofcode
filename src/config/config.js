@@ -120,11 +120,6 @@ export const configModal = [
     days: [68, 69, 70, 71, 72]
   },
   {
-    id: 25,
-    name: 'TBD',
-    days: [73, 74, 75]
-  },
-  {
     id: 76,
     name: 'Portfolio',
     days: []

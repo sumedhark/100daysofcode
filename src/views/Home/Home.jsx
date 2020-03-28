@@ -1,10 +1,17 @@
 import React from 'react';
 import coderBg from '../../assests/proud-coder.svg';
+import devBg from '../../assests/dev-coding.svg';
 import './Home.less';
 import { configModal } from '../../config/config';
 import CardComponent from '../../components/CardComponent/CardComponent';
+import { GithubOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
 
 function Home() {
+  const navigateToGit = () => {
+    const url = 'https://github.com/sumedhark/100DaysOfCode';
+    window.open(url, '_blank');
+  };
   return (
     <div className="home">
       <div className="home-header-content row">
@@ -29,6 +36,25 @@ function Home() {
           configModal.map(card => (
             <CardComponent tags={card.days} title={card.name} id={card.id} />
           ))}
+      </div>
+      <div className="home-content footer-container row">
+        <div className="footer-content-child">
+          <img className="proud-coder-image" src={devBg} alt="dev coder" />
+        </div>
+        <div className="footer-content-child">
+          <h2 className="footer-text">
+            100 Days of Code Challenge Dashboard by
+            <Button
+              type="primary"
+              shape="round"
+              size="large"
+              icon={<GithubOutlined />}
+              onClick={navigateToGit}
+            >
+              sumedhark
+            </Button>
+          </h2>
+        </div>
       </div>
     </div>
   );

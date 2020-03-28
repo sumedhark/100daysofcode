@@ -19,7 +19,7 @@ export default function CardComponent(props) {
             />
           ))}
         <div className="card-footer">
-          <Rate allowClear={false} defaultValue={3} />
+          <Rate disabled allowHalf defaultValue={3} />
           <Button type="primary" size="large" disabled>
             View
           </Button>
