@@ -1,6 +1,8 @@
 import React from 'react';
 import coderBg from '../../assests/proud-coder.svg';
 import './Home.less';
+import { configModal } from '../../config/config';
+import CardComponent from '../../components/CardComponent/CardComponent';
 
 function Home() {
   return (
@@ -22,7 +24,12 @@ function Home() {
           ></path>
         </svg>
       </div>
-      <div className="home-content row"></div>
+      <div className="home-content cards-container row">
+        {configModal.length > 0 &&
+          configModal.map(card => (
+            <CardComponent tags={card.days} title={card.name} id={card.id} />
+          ))}
+      </div>
     </div>
   );
 }

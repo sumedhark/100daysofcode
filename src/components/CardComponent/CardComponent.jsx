@@ -1,58 +1,39 @@
 import React from 'react';
-import { Skeleton, Switch, Card, Avatar } from 'antd';
-import {
-  EditOutlined,
-  EllipsisOutlined,
-  SettingOutlined
-} from '@ant-design/icons';
+import PropTypes from 'prop-types';
+import { Card, Badge, Button } from 'antd';
 
-const { Meta } = Card;
-
-export default class CardComponent extends React.Component {
-  state = {
-    loading: true
-  };
-
-  onChange = checked => {
-    this.setState({ loading: !checked });
-  };
-
-  render() {
-    const { loading } = this.state;
-
-    return (
-      <div>
-        <Switch checked={!loading} onChange={this.onChange} />
-
-        <Card style={{ width: 300, marginTop: 16 }} loading={loading}>
-          <Meta
-            avatar={
-              <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-            }
-            title="Card title"
-            description="This is the description"
-          />
-        </Card>
-
-        <Card
-          style={{ width: 300, marginTop: 16 }}
-          actions={[
-            <SettingOutlined key="setting" />,
-            <EditOutlined key="edit" />,
-            <EllipsisOutlined key="ellipsis" />
-          ]}
-        >
-          <Skeleton loading={loading} avatar active>
-            <Meta
-              avatar={
-                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-              }
-              title="Card title"
-              description="This is the description"
+export default function CardComponent(props) {
+  return (
+    <div className="col-sm-4 card-component">
+      <Card title={props.title} id={props.id} style={{ width: 300 }}>
+        {props.tags.length > 0 &&
+          props.tags.map(tag => (
+            <Badge
+              className="site-badge-count-109"
+              count={`Day ${tag}`}
+              style={{
+                border: '1px solid #6C62FF',
+                backgroundColor: 'white',
+                color: 'black'
+              }}
             />
-          </Skeleton>
-        </Card>
-      </div>
-    );
-  }
+          ))}
+        <Button type="primary" size="large" disabled>
+          View
+        </Button>
+      </Card>
+    </div>
+  );
 }
+
+CardComponent.propTypes = {
+  title: PropTypes.string,
+  tags: PropTypes.arrayOf,
+  id: PropTypes.number
+};
+
+CardComponent.defaultProps = {
+  title: '',
+  tags: [],
+  id: 0
+};
