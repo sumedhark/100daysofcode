@@ -61,7 +61,7 @@ export const configModal = [
   },
   {
     id: 13,
-    name: 'Email notification',
+    name: 'Carousel',
     days: [28, 29, 30]
   },
   {
@@ -120,7 +120,7 @@ export const configModal = [
     days: [68, 69, 70, 71, 72]
   },
   {
-    id: 76,
+    id: 25,
     name: 'Portfolio',
     days: []
   }
