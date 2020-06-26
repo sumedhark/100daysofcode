@@ -23,6 +23,23 @@ function Home() {
           ></path>
         </svg>
       </div>
+      <div>
+        <iframe
+          height="265"
+          // style="width: 100%;"
+          scrolling="no"
+          title="nmbjhb"
+          src="https://codepen.io/root-srk/embed/gOPRVQO?height=265&theme-id=dark&default-tab=html,result"
+          frameborder="no"
+          allowtransparency="true"
+          allowfullscreen="true"
+        >
+          See the Pen
+          <a href="https://codepen.io/root-srk/pen/gOPRVQO">nmbjhb</a> by
+          root-srk (<a href="https://codepen.io/root-srk">@root-srk</a>) on{" "}
+          <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+      </div>
       <div className="home-content cards-container row"></div>
       <div className="home-content footer-container row">
         <div className="footer-content-child">
