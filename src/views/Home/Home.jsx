@@ -1,7 +1,7 @@
 import React from "react";
 import coderBg from "../../assests/proud-coder.svg";
 import devBg from "../../assests/dev-coding.svg";
-import "./Home.less";
+import "./Home.scss";
 
 function Home() {
   return (
