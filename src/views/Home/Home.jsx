@@ -14,6 +14,12 @@ function Home() {
           <h1 className="project-title">{`100 Days of <CODE/>`}</h1>
         </div>
       </div>
+      <div className="home-header-content row">
+        <p>
+          Read the journal of day to day progress at
+          <a href="https://codedyke.wordpress.com"> my blog</a>
+        </p>
+      </div>
       <div class="container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
